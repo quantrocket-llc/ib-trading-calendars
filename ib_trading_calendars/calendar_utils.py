@@ -14,10 +14,53 @@
 
 from itertools import chain
 from trading_calendars import register_calendar, register_calendar_alias
+from .exchange_calendar_asx import ASXExchangeCalendar
+from .exchange_calendar_enextbe import ENEXTBEExchangeCalendar
 from .exchange_calendar_nyse import NYSEExchangeCalendar
+from .exchange_calendar_globex import GlobexExchangeCalendar
+from .exchange_calendar_iceus import ICEUSExchangeCalendar
+from .exchange_calendar_aeb import AEBExchangeCalendar
+from .exchange_calendar_cboe import CBOEExchangeCalendar
+from .exchange_calendar_fwb import FWBExchangeCalendar
+from .exchange_calendar_sehk import SEHKExchangeCalendar
+from .exchange_calendar_kse import KSEExchangeCalendar
+from .exchange_calendar_bvl import BVLExchangeCalendar
+from .exchange_calendar_bm import BMExchangeCalendar
+from .exchange_calendar_bvme import BVMEExchangeCalendar
+from .exchange_calendar_lse import LSEExchangeCalendar
+from .exchange_calendar_ose import OSEExchangeCalendar
+from .exchange_calendar_sbf import SBFExchangeCalendar
+from .exchange_calendar_sgx import SGXExchangeCalendar
+from .exchange_calendar_sehkntl import SEHKNTLExchangeCalendar
+from .exchange_calendar_sfb import SFBExchangeCalendar
+from .exchange_calendar_ebs import EBSExchangeCalendar
+from .exchange_calendar_tsej import TSEJExchangeCalendar
+from .exchange_calendar_tse import TSEExchangeCalendar
+from .exchange_calendar_vse import VSEExchangeCalendar
 
 _ib_calendar_factories = {
+    "AEB": AEBExchangeCalendar,
+    "ASX": ASXExchangeCalendar,
+    "BM": BMExchangeCalendar,
+    "BVL": BVLExchangeCalendar,
+    "BVME": BVMEExchangeCalendar,
+    "CBOE": CBOEExchangeCalendar,
+    "EBS": EBSExchangeCalendar,
+    "ENEXT.BE": ENEXTBEExchangeCalendar,
+    "FWB": FWBExchangeCalendar,
+    "GLOBEX": GlobexExchangeCalendar,
+    "ICEUS": ICEUSExchangeCalendar,
+    "KSE": KSEExchangeCalendar,
+    "LSE": LSEExchangeCalendar,
     "NYSE": NYSEExchangeCalendar,
+    "OSE": OSEExchangeCalendar,
+    "SEHK": SEHKExchangeCalendar,
+    "SEHKNTL": SEHKNTLExchangeCalendar,
+    "SBF": SBFExchangeCalendar,
+    "SFB": SFBExchangeCalendar,
+    "SGX": SGXExchangeCalendar,
+    "TSE": TSEExchangeCalendar,
+    "TSEJ": TSEJExchangeCalendar,
 }
 
 _ib_calendar_aliases = {
@@ -27,6 +70,8 @@ _ib_calendar_aliases = {
     "BATS": "NYSE",
     "IEX": "NYSE",
     "PINK": "NYSE",
+    "ENEXT": "ENEXT.BE",
+    "SEHKSZSE": "SEHKNTL"
 }
 
 ib_calendar_names = sorted(chain(_ib_calendar_factories.keys(),_ib_calendar_aliases.keys()))
