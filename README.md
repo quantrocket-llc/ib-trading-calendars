@@ -10,19 +10,7 @@ This package differs from the underlying `quantopian/trading_calendars` package 
 pip install ib-trading-calendars
 ```
 
-## Usage
-
-```python
-from ib_trading_calendars import get_calendar
-get_calendar("NYSE")
-```
-
-To see supported exchanges:
-
-```python
-from ib_trading_calendars import ib_calendar_names
-print(ib_calendar_names)
-```
+## Supported exchanges
 
 Currently the supported IB exchange codes are:
 
@@ -36,7 +24,6 @@ Currently the supported IB exchange codes are:
 * BVME
 * CBOE
 * EBS
-* ENEXT
 * ENEXT.BE
 * FWB
 * GLOBEX
@@ -56,6 +43,20 @@ Currently the supported IB exchange codes are:
 * SGX
 * TSE
 * TSEJ
+
+## Usage
+
+```python
+from ib_trading_calendars import get_calendar
+get_calendar("NYSE")
+```
+
+To see supported exchanges:
+
+```python
+from ib_trading_calendars import ib_calendar_names
+print(ib_calendar_names)
+```
 
 ## Open time
 
