@@ -24,6 +24,39 @@ from ib_trading_calendars import ib_calendar_names
 print(ib_calendar_names)
 ```
 
+Currently the supported IB exchange codes are:
+
+* AEB
+* AMEX
+* ARCA
+* ASX
+* BATS
+* BM
+* BVL
+* BVME
+* CBOE
+* EBS
+* ENEXT
+* ENEXT.BE
+* FWB
+* GLOBEX
+* ICEUS
+* IEX
+* KSE
+* LSE
+* NASDAQ
+* NYSE
+* OSE
+* PINK
+* SBF
+* SEHK
+* SEHKNTL
+* SEHKSZSE
+* SFB
+* SGX
+* TSE
+* TSEJ
+
 ## Open time
 
 The underlying `quantopian/trading_calendars` package sets exchange open times 1 minute later than the actual open. For example, the exchange hours for NYSE are 9:31-16:00 in `quantopian/trading_calendars`, even though NYSE actually opens at 9:30. This behavior reflects the needs of zipline, from which `trading_calendars` originated, but it leads to incorrect results for more generic use cases:
