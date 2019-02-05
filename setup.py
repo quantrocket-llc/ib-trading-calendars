@@ -13,6 +13,9 @@ setup(
     url='https://github.com/quantrocket-llc/ib-trading-calendars',
     license='Apache 2.0',
     packages=['ib_trading_calendars'],
+    entry_points = {
+        'console_scripts': ['exchange-status=ib_trading_calendars.status:main'],
+    },
     install_requires=[
         'trading_calendars>=1.7.0'
     ]
