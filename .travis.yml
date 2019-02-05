@@ -2,6 +2,6 @@ language: python
 python:
   - "3.6"
 install:
-  - pip install pandas>=0.23,<0.24
+  - pip install 'pandas>=0.23,<0.24'
   - pip install .
 script: "python -m unittest discover -s tests/ -p test_*.py -t . -v"
