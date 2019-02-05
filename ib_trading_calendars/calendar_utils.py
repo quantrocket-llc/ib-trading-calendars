@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from itertools import chain
-from trading_calendars import register_calendar, register_calendar_alias
+from trading_calendars import register_calendar_type, register_calendar_alias
 from .exchange_calendar_asx import ASXExchangeCalendar
 from .exchange_calendar_enextbe import ENEXTBEExchangeCalendar
 from .exchange_calendar_nyse import NYSEExchangeCalendar
@@ -74,11 +73,15 @@ _ib_calendar_aliases = {
     "SEHKSZSE": "SEHKNTL"
 }
 
-ib_calendar_names = sorted(chain(_ib_calendar_factories.keys(),_ib_calendar_aliases.keys()))
+ib_calendar_factories = {}
 
 for name, calendar in _ib_calendar_factories.items():
-    register_calendar(name, calendar(), force=True)
+    register_calendar_type(name, calendar, force=True)
+    ib_calendar_factories[name] = calendar
 
 
 for alias, real_name in _ib_calendar_aliases.items():
     register_calendar_alias(alias, real_name, force=True)
+    ib_calendar_factories[alias] = ib_calendar_factories[real_name]
+
+ib_calendar_names = sorted(ib_calendar_factories.keys())
