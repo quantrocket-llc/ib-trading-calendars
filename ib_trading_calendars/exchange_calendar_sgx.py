@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xses import XSESExchangeCalendar
 class SGXExchangeCalendar(XSESExchangeCalendar):
 
     name = "SGX"
-    open_times = (
-        (None, time(9, 0)),
-    )

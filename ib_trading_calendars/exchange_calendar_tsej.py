@@ -20,6 +20,3 @@ class TSEJExchangeCalendar(XTKSExchangeCalendar):
 
     name = "TSEJ"
     tz = timezone("Japan")
-    open_times = (
-        (None, time(9, 0)),
-    )

@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xkrx import XKRXExchangeCalendar
 class KSEExchangeCalendar(XKRXExchangeCalendar):
 
     name = "KSE"
-    open_times = (
-        (None, time(9, 0)),
-    )

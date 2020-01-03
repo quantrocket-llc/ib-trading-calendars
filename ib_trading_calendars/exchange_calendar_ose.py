@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xosl import XOSLExchangeCalendar
 class OSEExchangeCalendar(XOSLExchangeCalendar):
 
     name = "OSE"
-    open_times = (
-        (None, time(9, 0)),
-    )

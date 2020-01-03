@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xswx import XSWXExchangeCalendar
 class EBSExchangeCalendar(XSWXExchangeCalendar):
 
     name = "EBS"
-    open_times = (
-        (None, time(9, 0)),
-    )

@@ -20,6 +20,3 @@ class TSEExchangeCalendar(XTSEExchangeCalendar):
 
     name = "TSE"
     tz = timezone("America/Toronto")
-    open_times = (
-        (None, time(9, 30)),
-    )

@@ -20,6 +20,3 @@ class NYSEExchangeCalendar(XNYSExchangeCalendar):
 
     name = "NYSE"
     tz = timezone("America/New_York")
-    open_times = (
-        (None, time(9, 30)),
-    )

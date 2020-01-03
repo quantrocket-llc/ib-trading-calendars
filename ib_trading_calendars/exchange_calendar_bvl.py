@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xlis import XLISExchangeCalendar
 class BVLExchangeCalendar(XLISExchangeCalendar):
 
     name = "BVL"
-    open_times = (
-        (None, time(8, 0)),
-    )

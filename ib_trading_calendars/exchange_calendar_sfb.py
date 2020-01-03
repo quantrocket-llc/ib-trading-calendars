@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xsto import XSTOExchangeCalendar
 class SFBExchangeCalendar(XSTOExchangeCalendar):
 
     name = "SFB"
-    open_times = (
-        (None, time(9, 0)),
-    )

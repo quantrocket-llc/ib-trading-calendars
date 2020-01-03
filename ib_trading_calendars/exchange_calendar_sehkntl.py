@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xshg import XSHGExchangeCalendar
 class SEHKNTLExchangeCalendar(XSHGExchangeCalendar):
 
     name = "SEHKNTL"
-    open_times = (
-        (None, time(9, 30)),
-    )

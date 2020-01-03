@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xwbo import XWBOExchangeCalendar
 class VSEExchangeCalendar(XWBOExchangeCalendar):
 
     name = "VSE"
-    open_times = (
-        (None, time(9, 0)),
-    )

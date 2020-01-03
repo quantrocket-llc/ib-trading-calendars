@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xmil import XMILExchangeCalendar
 class BVMEExchangeCalendar(XMILExchangeCalendar):
 
     name = "BVME"
-    open_times = (
-        (None, time(9, 0)),
-    )

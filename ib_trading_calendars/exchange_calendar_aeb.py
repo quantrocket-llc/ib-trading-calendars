@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xams import XAMSExchangeCalendar
 class AEBExchangeCalendar(XAMSExchangeCalendar):
 
     name = "AEB"
-    open_times = (
-        (None, time(9, 0)),
-    )

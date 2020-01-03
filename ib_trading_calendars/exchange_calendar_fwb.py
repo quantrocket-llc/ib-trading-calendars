@@ -20,6 +20,3 @@ class FWBExchangeCalendar(XFRAExchangeCalendar):
 
     name = "FWB"
     tz = timezone("Europe/Berlin")
-    open_times = (
-        (None, time(9, 0)),
-    )

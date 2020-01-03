@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xmad import XMADExchangeCalendar
 class BMExchangeCalendar(XMADExchangeCalendar):
 
     name = "BM"
-    open_times = (
-        (None, time(9, 0)),
-    )

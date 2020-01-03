@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xcbf import XCBFExchangeCalendar
 class CBOEExchangeCalendar(XCBFExchangeCalendar):
 
     name = "CBOE"
-    open_times = (
-        (None, time(8, 30)),
-    )

@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_cmes import CMESExchangeCalendar
 class GlobexExchangeCalendar(CMESExchangeCalendar):
 
     name = "GLOBEX"
-    open_times = (
-        (None, time(17, 0)),
-    )

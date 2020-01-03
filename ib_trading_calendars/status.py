@@ -37,13 +37,23 @@ def get_exchange_status(exchange, dt):
     calendar = calendar_cls(start=start, end=end)
 
     is_open = calendar.is_open_on_minute(asof_datetime)
+    # Note: The `trading_calendars` package sets exchange open times 1 minute
+    # later than the actual open. For example, the exchange hours for NYSE
+    # are 9:31-16:00 in `trading_calendars`, even though NYSE actually opens
+    # at 9:30. This behavior reflects the needs of zipline. To deal with
+    # this, we consider the exchange open if it is open this minute, or next
+    # minute.
+    if not is_open:
+        is_open = calendar.is_open_on_minute(asof_datetime + pd.Timedelta(minutes=1))
 
     if is_open:
-        since = calendar.previous_open(asof_datetime)
+        # Rewind open 1 minute
+        since = calendar.previous_open(asof_datetime) - pd.Timedelta(minutes=1)
         until = calendar.next_close(asof_datetime)
     else:
         since = calendar.previous_close(asof_datetime)
-        until = calendar.next_open(asof_datetime)
+        # Rewind open 1 minute
+        until = calendar.next_open(asof_datetime) - pd.Timedelta(minutes=1)
 
     since = since.tz_convert(asof_datetime.tz.zone).strftime("%Y-%m-%dT%H:%M:%S")
     until = until.tz_convert(asof_datetime.tz.zone).strftime("%Y-%m-%dT%H:%M:%S")

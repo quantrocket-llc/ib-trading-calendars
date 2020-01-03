@@ -18,6 +18,3 @@ from trading_calendars.exchange_calendar_xasx import XASXExchangeCalendar
 class ASXExchangeCalendar(XASXExchangeCalendar):
 
     name = "ASX"
-    open_times = (
-        (None, time(10, 0)),
-    )

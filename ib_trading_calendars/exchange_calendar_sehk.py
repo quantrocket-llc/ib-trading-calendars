@@ -19,7 +19,3 @@ from trading_calendars.exchange_calendar_xhkg import XHKGExchangeCalendar
 class SEHKExchangeCalendar(XHKGExchangeCalendar):
 
     name = "SEHK"
-    open_times = (
-        (None, time(10, 0)),
-        (pd.Timestamp('2011-03-07'), time(9, 30)),
-    )

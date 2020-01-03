@@ -20,6 +20,3 @@ class ICEUSExchangeCalendar(IEPAExchangeCalendar):
 
     name = "ICEUS"
     tz = timezone("America/New_York")
-    open_times = (
-        (None, time(20, 0)),
-    )
