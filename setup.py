@@ -17,6 +17,6 @@ setup(
         'console_scripts': ['exchange-status=ib_trading_calendars.status:main'],
     },
     install_requires=[
-        'trading_calendars>=1.7.0'
+        'trading_calendars>=1.11.0'
     ]
 )
