@@ -13,34 +13,39 @@
 # limitations under the License.
 
 from trading_calendars import register_calendar_type, register_calendar_alias
+from .exchange_calendar_aeb import AEBExchangeCalendar
 from .exchange_calendar_asx import ASXExchangeCalendar
+from .exchange_calendar_bm import BMExchangeCalendar
+from .exchange_calendar_bux import BUXExchangeCalendar
+from .exchange_calendar_bvl import BVLExchangeCalendar
+from .exchange_calendar_bvme import BVMEExchangeCalendar
+from .exchange_calendar_cboe import CBOEExchangeCalendar
+from .exchange_calendar_ebs import EBSExchangeCalendar
 from .exchange_calendar_enextbe import ENEXTBEExchangeCalendar
-from .exchange_calendar_nyse import NYSEExchangeCalendar
+from .exchange_calendar_fwb import FWBExchangeCalendar
 from .exchange_calendar_globex import GlobexExchangeCalendar
 from .exchange_calendar_iceus import ICEUSExchangeCalendar
-from .exchange_calendar_aeb import AEBExchangeCalendar
-from .exchange_calendar_cboe import CBOEExchangeCalendar
-from .exchange_calendar_fwb import FWBExchangeCalendar
-from .exchange_calendar_sehk import SEHKExchangeCalendar
 from .exchange_calendar_kse import KSEExchangeCalendar
-from .exchange_calendar_bvl import BVLExchangeCalendar
-from .exchange_calendar_bm import BMExchangeCalendar
-from .exchange_calendar_bvme import BVMEExchangeCalendar
 from .exchange_calendar_lse import LSEExchangeCalendar
+from .exchange_calendar_mexi import MEXIExchangeCalendar
+from .exchange_calendar_moex import MOEXExchangeCalendar
+from .exchange_calendar_nyse import NYSEExchangeCalendar
 from .exchange_calendar_ose import OSEExchangeCalendar
 from .exchange_calendar_sbf import SBFExchangeCalendar
-from .exchange_calendar_sgx import SGXExchangeCalendar
+from .exchange_calendar_sehk import SEHKExchangeCalendar
 from .exchange_calendar_sehkntl import SEHKNTLExchangeCalendar
 from .exchange_calendar_sfb import SFBExchangeCalendar
-from .exchange_calendar_ebs import EBSExchangeCalendar
-from .exchange_calendar_tsej import TSEJExchangeCalendar
+from .exchange_calendar_sgx import SGXExchangeCalendar
 from .exchange_calendar_tse import TSEExchangeCalendar
+from .exchange_calendar_tsej import TSEJExchangeCalendar
 from .exchange_calendar_vse import VSEExchangeCalendar
+from .exchange_calendar_wse import WSEExchangeCalendar
 
 _ib_calendar_factories = {
     "AEB": AEBExchangeCalendar,
     "ASX": ASXExchangeCalendar,
     "BM": BMExchangeCalendar,
+    "BUX": BUXExchangeCalendar,
     "BVL": BVLExchangeCalendar,
     "BVME": BVMEExchangeCalendar,
     "CBOE": CBOEExchangeCalendar,
@@ -51,6 +56,8 @@ _ib_calendar_factories = {
     "ICEUS": ICEUSExchangeCalendar,
     "KSE": KSEExchangeCalendar,
     "LSE": LSEExchangeCalendar,
+    "MEXI": MEXIExchangeCalendar,
+    "MOEX": MOEXExchangeCalendar,
     "NYSE": NYSEExchangeCalendar,
     "OSE": OSEExchangeCalendar,
     "SEHK": SEHKExchangeCalendar,
@@ -60,6 +67,8 @@ _ib_calendar_factories = {
     "SGX": SGXExchangeCalendar,
     "TSE": TSEExchangeCalendar,
     "TSEJ": TSEJExchangeCalendar,
+    "VSE": VSEExchangeCalendar,
+    "WSE": WSEExchangeCalendar,
 }
 
 _ib_calendar_aliases = {

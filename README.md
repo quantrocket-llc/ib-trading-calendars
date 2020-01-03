@@ -12,7 +12,7 @@ pip install ib-trading-calendars
 
 ## Supported exchanges
 
-Currently the supported IB exchange codes are:
+Currently the supported IBKR exchange codes are:
 
 * AEB
 * AMEX
@@ -20,6 +20,7 @@ Currently the supported IB exchange codes are:
 * ASX
 * BATS
 * BM
+* BUX
 * BVL
 * BVME
 * CBOE
@@ -31,6 +32,8 @@ Currently the supported IB exchange codes are:
 * IEX
 * KSE
 * LSE
+* MEXI
+* MOEX
 * NASDAQ
 * NYSE
 * OSE
@@ -43,6 +46,8 @@ Currently the supported IB exchange codes are:
 * SGX
 * TSE
 * TSEJ
+* VSE
+* WSE
 
 ## Usage
 
